@@ -1,0 +1,25 @@
+{
+  "short_name": "NetSense",
+  "name": "NetSense - Network Multi-SIM Intelligence",
+  "description": "Network intelligence, speed rankings, data thief detector, heatmaps, and AI recommendations optimized for dual-SIM and unstable networks.",
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#090b10",
+  "theme_color": "#f43f5e",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/launcher_icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/launcher_icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}

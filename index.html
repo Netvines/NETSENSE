@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>NetSense - Network Multi-SIM Intelligence</title>
+    
+    <!-- PWA Installable Configs -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#090b10" />
+    
+    <!-- Mobile App Overrides for Android and iOS Safari Standalone -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="NetSense" />
+    <link rel="apple-touch-icon" href="/launcher_icon.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/launcher_icon.png" />
+  </head>
+  <body class="bg-[#090b10] text-[#f8fafc] text-sans antialiased selection:bg-rose-500/30 selection:text-white">
+    <div id="root" class="min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Registration of Service Worker for installation prompt checks -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((reg) => {
+              console.log('NetSense Service Worker registered successfully with scope:', reg.scope);
+            })
+            .catch((err) => {
+              console.error('NetSense Service Worker registration failed:', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+
